@@ -38,6 +38,20 @@ public class Main {
                 + ". Я родился в " + (CURR_YEAR - artem.yearOfBirth)
                 + " году. Я работаю на должности " + artem.job
                 + ". Будем знакомы!");
+
+        Human testInParam = new Human(-1, "Test", "Test", "test");
+        System.out.println("Привет! Меня зовут " + testInParam.name
+                + ". Я из города " + testInParam.town
+                + ". Я родился в " + (CURR_YEAR - testInParam.yearOfBirth)
+                + " году. Я работаю на должности " + testInParam.job
+                + ". Будем знакомы!");
+
+        Human testInParam2 = new Human(5, null, "", "");
+        System.out.println("Привет! Меня зовут " + testInParam2.name
+                + ". Я из города " + testInParam2.town
+                + ". Я родился в " + (CURR_YEAR - testInParam2.yearOfBirth)
+                + " году. Я работаю на должности " + testInParam2.job
+                + ". Будем знакомы!");
     }
     private static void createCar() {
         System.out.println("Создаем автопарк:");
@@ -74,7 +88,7 @@ public class Main {
                 + "; Год производства: " + kia.productionYear
                 + "; Страна сборки: " + kia.productionCountry);
 
-        Car hyundai = new Car("Hyundai", "Avante", 1.6f, "оранжевый", 2016, "Южная Корея");
+        Car hyundai = new Car("", "", 0, "", 0, "");
         System.out.println("Бренд: "+ hyundai.brand
                 + "; Модель: " + hyundai.model
                 + "; Объем двигателя: " + hyundai.engineVolume
